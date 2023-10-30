@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e9ecf4;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 2000px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 100px 100px auto;
+
+    grid-template-areas: "header        header"
+                         "menu          menu"
+                         "submenu       imagen"
+                         "contenido     imagen"                         
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .menu,
+.contenedor .submenu,
+.contenedor .contenido,
+.contenedor .imagen {
+    background: #fff;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, .25);
+}
+
+.contenedor1 {
+        width: 90%;
+        max-width: 2000px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+    
+        grid-template-areas: "titulaciones   titulaciones   titulaciones"
+                             "titulacion1    titulacion2    titulacion3"
+                             "campo          campo1         campo2"
+                             "matriculas     matriculas     matriculas"
+                             "imagen2        imagen2        lista"
+                             "perfil         perfil         lista"
+                             "footer         footer         footer";
+    }
+
+.contenedor1 > div,
+    .contenedor1 .titulaciones,
+    .contenedor1 .titulacion1,
+    .contenedor1 .titulacion2,
+    .contenedor1 .titulacion3,
+    .contenedor1 .campo,
+    .contenedor1 .campo1,
+    .contenedor1 .campo2,
+    .contenedor1 .matriculas,
+    .contenedor1 .imagen2,
+    .contenedor1 .lista,
+    .contenedor1 .perfil,
+    .contenedor1 .footer {
+        background: #fff;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, .25);
+    }
+
+.contenedor .header {
+    background: #fff;
+    color: #000;
+    text-align: left;
+    image-resolution: 10px;
+    grid-area: header;
+}
+
+.contenedor .menu {
+    background: #fff;
+    font-weight: bold;
+    font-size: larger;
+    color: #000;
+    grid-area: menu;
+    text-align: center;
+}
+
+.contenedor .submenu {
+    grid-area: submenu;
+    color: #000;
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+    
+}
+
+.contenedor .imagen {
+    grid-column: 3/4;
+    background: #fff;
+    grid-area: imagen;
+}
+
+.contenedor1 .titulaciones {
+    background: #fff;
+    color: #000;
+    text-align: center;
+    grid-area: titulaciones;
+}
+
+.contenedor1 .titulacion1 {
+    background: #e4e5e7;
+    padding: 20%;
+    grid-area: titulacion1;
+    text-align: center;
+}
+
+.contenedor1 .titulacion2 {
+    background: #e4e5e7;
+    padding: 20%;
+    grid-area: titulacion2;
+    text-align: center;
+}
+
+.contenedor1 .titulacion3 {
+    background: #e4e5e7;
+    padding: 20%;
+    grid-area: titulacion3;
+    text-align: center;
+}
+
+.contenedor1 .campo {
+    grid-area: campo;
+    text-align: left;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.contenedor1 .campo1 {
+    grid-area: campo1;
+    text-align: center;
+    image-resolution: unset;
+    img {
+        width: 300px;
+        height: 400px;
+    }
+}
+
+.contenedor1 .campo2 {
+    grid-area: campo2;
+    text-align: center;
+    img {
+        width: 300px;
+        height: 400px;
+    }
+}
+
+.contenedor1 .matriculas {
+    grid-area: matriculas;
+    text-align: center;
+}
+
+.contenedor1 .imagen2 {
+    grid-area: imagen2;
+}
+
+.contenedor1 .lista {
+    grid-area: lista;
+    text-align: left;
+    font-weight: bold;
+}
+
+.contenedor1 .perfil {
+    grid-area: perfil;
+    text-align: left;
+}
+
+.contenedor1 .footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+    @media screen and (max-width: 768px) {
+        .contenedor {
+            grid-template-areas: "header      header       header"
+                                 "menu        menu         menu"
+                                 "submenu     submenu      submenu"
+                                 "contenido   contenido    contenido"";
+        }
+}
+
